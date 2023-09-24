@@ -1,3 +1,4 @@
+// header handeling
 let header = document.querySelector('header')
 window.onscroll = function () {
     if (window.scrollY > 50) {
@@ -9,6 +10,15 @@ window.onscroll = function () {
     }
 }
 
+// Handeling Menu
+let menuIco = document.querySelector('.menuIco')
+let menuCh = document.querySelector('.menuCh')
+menuIco.addEventListener('mouseover' , () => {
+    menuCh.classList.toggle('active')
+})
+menuIco.addEventListener('mouseout' , () => {
+    menuCh.classList.toggle('active')
+})
 
 
 let shap = document.querySelector('.shap')
@@ -17,6 +27,7 @@ shap.style.top = "150%"
 imageConter.style.right = '-120%'
 window.onload = () => {
     shap.style.top = '85%'
+    shap.classList.add('center')
     imageConter.style.right = '-30%'
 }
 
@@ -36,5 +47,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let date = document.querySelector('.date')
 year = Date().split(' ')[3]
-console.log(year)
 date.innerHTML = `${year}`
